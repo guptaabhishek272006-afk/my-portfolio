@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#111827;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Home Section */
+.home{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 10%;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.home-content{
+    max-width:600px;
+}
+
+.home-content h3{
+    font-size:28px;
+}
+
+.home-content h1{
+    font-size:60px;
+    margin:10px 0;
+}
+
+.home-content span{
+    color:#38bdf8;
+}
+
+.home-content p{
+    font-size:18px;
+    line-height:1.8;
+    margin:20px 0;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* Profile Image */
+.home-img img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #38bdf8;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Abhishek</div>
+
+    <ul>
+        <li><a href="C:\Users\Adhishek\Abhishek.html\home.html">Home</a></li>
+        <li><a href="C:\Users\Adhishek\Abhishek.html\About me.html">About</a></li>
+        <li><a href="C:\Users\Adhishek\Abhishek.html\skill.html">Skills</a></li>
+        <li><a href="C:\Users\Adhishek\Abhishek.html\project.html">Projects</a></li>
+        <li><a href="C:\Users\Adhishek\Abhishek.html\contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="home">
+
+    <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Abhishek Gupta</h1>
+        <h3>And I'm a <span>B.Tech Student</span></h3>
+
+        <p>
+            Welcome to my portfolio website. I am a B.Tech (EIC)
+            student at RTU Kota. I am passionate about Web Development,
+            Programming, and learning new technologies.
+        </p>
+
+    </div>
+
+    <div class="home-img">
+        <img src="C:\Users\Adhishek\.vscode\.vscode\your-photo.jpg.jpeg" alt="Abhishek Gupta">
+
+        
+<a href="#" class="btn">Download Resume</a>
+
+    </div>
+
+</section>
+
+</body>
+</html>
