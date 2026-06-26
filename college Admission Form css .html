@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RTU Admission Form</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        .header{
+            text-align: center;
+        }
+
+        .logo{
+            width: 100px;
+            height: 100px;
+        }
+
+        h2{
+            margin: 5px;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        td{
+            padding: 10px;
+        }
+
+        input, textarea, select{
+            width: 100%;
+            padding: 5px;
+        }
+
+        .signature{
+            width: 200px;
+            border-top: 1px solid black;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .print-btn{
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        @media print{
+            .print-btn{
+                display:none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <!-- RTU Logo -->
+    <img src="C:\Users\Adhishek\.vscode\.vscode\rtu_logo . png.jpeg"
+         class="logo" alt="RTU Logo">
+
+
+    <h2>RAJASTHAN TECHNICAL UNIVERSITY, KOTA</h2>
+    <h3>ADMISSION APPLICATION FORM</h3>
+</div>
+
+<div class="background">
+    <img src="rtu_background . png.jpeg"
+    class="background" alt="RTU background"
+
+    .background{
+        background-image: url("rtu_background . png.jpeg");
+        background-size: cover;
+        background-position:centre;
+        height:100vh;
+        width:100%;
+    }
+</div>
+
+
+<form>
+
+<table>
+<tr>
+    <td>Student Name:</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Father's Name:</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Mother's Name:</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Date of Birth:</td>
+    <td><input type="date"></td>
+</tr>
+
+<tr>
+    <td>Gender:</td>
+    <td>
+        <select>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Course:</td>
+    <td>
+        <select>
+            <option>B.Tech</option>
+            <option>M.Tech</option>
+            <option>MBA</option>
+            <option>MCA</option>
+        </select>
+    </td>
+</tr>
+
+<tr>
+    <td>Branch:</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Category:</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Mobile Number:</td>
+    <td><input type="tel"></td>
+</tr>
+
+<tr>
+    <td>Email ID:</td>
+    <td><input type="email"></td>
+</tr>
+
+<tr>
+    <td>Address:</td>
+    <td><textarea rows="4"></textarea></td>
+</tr>
+
+<tr>
+    <td>12th Percentage:</td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td>Aadhar Number:</td>
+    <td><input type="text"></td>
+</tr>
+</table>
+
+<br><br>
+
+Upload File: signature
+<input type="file">
+
+<br><br>
+
+<input type="submit"  value="submit">
+
+</form>
+
+</body>
+</html>
