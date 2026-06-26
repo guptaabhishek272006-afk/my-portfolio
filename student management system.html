@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Management System</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #333; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 10px; text-align: center; }
+    th { background-color: #f4f4f4; }
+    input, button { margin: 5px; padding: 8px; }
+    .form-section { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Student Management System</h1>
+
+  <div class="form-section">
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="number" id="age" placeholder="Enter Age">
+    <input type="text" id="course" placeholder="Enter Course">
+    <button onclick="addStudent()">Add Student</button>
+  </div>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Course</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    let idCounter = students.length ? students[students.length - 1].id + 1 : 1;
+
+    function saveData() {
+      localStorage.setItem("students", JSON.stringify(students));
+    }
+
+    function addStudent() {
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+      const course = document.getElementById("course").value;
+
+      if (name && age && course) {
+        students.push({ id: idCounter++, name, age, course });
+        saveData();
+        displayStudents();
+        clearForm();
+      } else {
+        alert("Please fill all fields!");
+      }
+    }
+
+    function displayStudents() {
+      const tbody = document.querySelector("#studentTable tbody");
+      tbody.innerHTML = "";
+      students.forEach(student => {
+        const row = `<tr>
+          <td>${student.id}</td>
+          <td>${student.name}</td>
+          <td>${student.age}</td>
+          <td>${student.course}</td>
+          <td>
+            <button onclick="editStudent(${student.id})">Edit</button>
+            <button onclick="deleteStudent(${student.id})">Delete</button>
+          </td>
+        </tr>`;
+        tbody.innerHTML += row;
+      });
+    }
+
+    function editStudent(id) {
+      const student = students.find(s => s.id === id);
+      document.getElementById("name").value = student.name;
+      document.getElementById("age").value = student.age;
+      document.getElementById("course").value = student.course;
+
+      deleteStudent(id); // remove old record, will add updated one
+    }
+
+    function deleteStudent(id) {
+      students = students.filter(s => s.id !== id);
+      saveData();
+      displayStudents();
+    }
+
+    function clearForm() {
+      document.getElementById("name").value = "";
+      document.getElementById("age").value = "";
+      document.getElementById("course").value = "";
+    }
+
+    // Load existing data on page load
+    window.onload = displayStudents;
+  </script>
+</body>
+</html>
