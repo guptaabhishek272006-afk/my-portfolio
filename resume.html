@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Abhishek Gupta</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background: #222;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h1 { font-size: 22px; animation: slideInLeft 1s ease; }
+    nav ul { list-style: none; display: flex; gap: 20px; animation: slideInRight 1s ease; }
+    nav ul li a { color: #fff; text-decoration: none; transition: color 0.3s; }
+    nav ul li a:hover { color: #ff9800; }
+
+    /* Hero Section */
+    header {
+      background: linear-gradient(135deg, #ff9800, #ff5722);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 2s ease;
+    }
+    header h1 { font-size: 40px; margin-bottom: 10px; animation: bounceIn 1.5s ease; }
+    header p { font-size: 18px; animation: fadeInUp 2s ease; }
+
+    /* Sections */
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #ff5722;
+      border-bottom: 2px solid #ff9800;
+      display: inline-block;
+      animation: slideInLeft 1s ease;
+    }
+
+    /* Cards */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Skills Grid */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .skill {
+      background: #ff9800;
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      animation: fadeInUp 1s ease;
+    }
+
+    /* Download Button */
+    .download-btn {
+      display: inline-block;
+      background: #ff5722;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      margin-top: 20px;
+    }
+    .download-btn:hover { background: #e64a19; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+      margin-top: 40px;
+      animation: fadeIn 2s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideInLeft { from { transform: translateX(-100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    @keyframes slideInRight { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    @keyframes bounceIn {
+      0% { transform: scale(0.3); opacity: 0; }
+      50% { transform: scale(1.1); opacity: 1; }
+      70% { transform: scale(0.9); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>Abhishek Gupta’s Resume</h1>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="skill.html">Skills</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Abhishek Gupta</h1>
+    <p>B.Tech Student | Electronics & Instrumentation (EIC)</p>
+
+  </header>
+
+  <!-- Profile -->
+  <section>
+    <h2>Profile</h2>
+    <div class="card">
+      <p>Motivated EIC branch student with strong interest in electronics, instrumentation, and web development. Skilled in circuit design, programming, and modern web technologies.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Electronics</div>
+      <div class="skill">Instrumentation</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">Git</div>
+      <div class="skill">UI/UX Design</div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section>
+    <h2>Education</h2>
+    <div class="card">
+      <h3>B.Tech in Electronics & Instrumentation (EIC)</h3>
+      <p>Rajasthan Technical University (RTU), 2025–2029</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Projects</h2>
+    
+    <div class="card">
+      <h3>Student Management System</h3>
+      <p>Developed a web-based system with add, view, update, and delete features using HTML, CSS, JavaScript, and LocalStorage.</p>
+    </div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Created a responsive portfolio with animations, hover effects, and modern UI design.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Abhishek Gupta | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
